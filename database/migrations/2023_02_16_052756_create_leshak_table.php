@@ -20,8 +20,8 @@ return new class extends Migration
             $table->foreign('BuildingID')->references('id')->on('building');
             $table->unsignedBigInteger('DerimID');
             $table->foreign('DerimID')->references('id')->on('derim');
-            $table->unsignedBigInteger('StaffID');
-            $table->foreign('StaffID')->references('id')->on('staff');
+            $table->integer('StaffID');
+           
             $table->tinyInteger('Delete_tab');
         
         });
