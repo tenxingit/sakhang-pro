@@ -1,7 +1,7 @@
 <x-layout>
     <main class="max-w-lg mx-auto mt-9 bg-gray-100 border border-gray-200 p-6 rounded-xl">
         <h1 class="text-center font-bold text-xl"> Add Staff</h1>
-        <form method="POST" action="add-staff">
+        <form method="POST" action="{{ route('store') }}">
             @csrf
             <div class="mb-5 ">
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Application no">
@@ -34,36 +34,23 @@
             <div class="mb-5">
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="First Name">
                 </lable>
-                First Name
+                 Name
                 <input class="border border-gray-400 p2 w-full" 
                 type="text" 
-                name="fname" 
-                id="fname" 
+                name="Name" 
+                id="Name" 
                 required>
-                 @error('fname')
+                 @error('Name')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
 
-            <div class="mb-5">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Last Name">
-                </lable>
-                Last Name
-                <input class="border border-gray-400 p2 w-full" 
-                type="text" 
-                name="lname" 
-                id="lname" 
-                required>
-                 @error('lname')
-                <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </div>
 
             <div class="mb-5">
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Post">
                 </lable>
                 Post
-                <select  id="Post" name="post">
+                <select  id="Post" name="Post">
                     <option value="">Please Select</option>
                             <option value="Additional Secretary">Additional Secretary</option>
                             <option value="Chief Supreme Justice Commissioner">Chief Supreme Justice Commissioner</option>
@@ -85,7 +72,7 @@
                             <option value="Supreme Justice Commissioner">Supreme Justice Commissioner</option>
                             <option value="Under Secretary ">Under Secretary </option>
                 </select>
-                 @error('post')
+                 @error('Post')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
@@ -94,7 +81,7 @@
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Department">
                 </lable>
                 Department
-                <select id="Department" name="dept">
+                <select id="Department" name="Dept">
                             <option value="">Please Select</option>
                             <option value="Audit Office">Audit Office</option>
                             <option value="DIIR">DIIR</option>
@@ -138,7 +125,7 @@
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Status">
                 </lable>
                 Status
-                <select id="Status" name="status">
+                <select id="Status" name="Status">
                     <option value="">Please Select</option>
                     <option value="Exceptional Cases">Exceptional Cases</option>
                     <option value="General Waiting List">General Waiting List</option>
@@ -153,7 +140,7 @@
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Remarks">
                 </lable>
                 Remarks
-               <textarea name="remarks" id="Remarks"></textarea>
+               <textarea name="Remarks" id="Remarks"></textarea>
                 @error('remark')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror

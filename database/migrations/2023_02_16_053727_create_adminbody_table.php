@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('departments', function (Blueprint $table) {
-            $table->id();
-            $table->string('DepName');
-            $table->unsignedBigInteger('AdminBodyID');
-            $table->foreign('AdminBodyID')->references('id')->on('adminbody');
-            $table->tinyInteger('delete_tab');
+        Schema::create('adminbody', function (Blueprint $table) {
+            $table->ID();
+            $table->string('AdminBodyName');
+            $table->tinyInteger('Delete_tab');
+            
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departments');
+        Schema::dropIfExists('adminbody');
     }
 };

@@ -1,9 +1,8 @@
 <?php
 
-use GuzzleHttp\Promise\Create;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StaffController;
 use App\Http\Controllers\ChangePasscontroller;
+use App\Http\Controllers\StaffController;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('add-staff', [StaffController::class, 'index']);
-Route::post('add-staff', [StaffController::class, 'store']);
+Route::post('/store', [StaffController::class, 'store'])->name('store');;
+
 
 Route::get('changepass', [ChangePasscontroller::class, 'change']);
 Route::post('changepass', [ChangePasscontroller::class, 'store']);

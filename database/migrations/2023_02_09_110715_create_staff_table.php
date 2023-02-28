@@ -18,11 +18,15 @@ return new class extends Migration
             $table->string('Appno');
             $table->date('Appdate');
             $table->string('Name');
-            $table->string('Post');
-            $table->string('Dept');
+            $table->unsignedBigInteger('Post');
+            $table->foreign('Post')->references('id')->on('post');
+            $table->unsignedBigInteger('Dept');
+            $table->foreign('Dept')->references('id')->on('departments');
             $table->date('Appodate');
-            $table->string('Status');
+            $table->unsignedBigInteger('Status');
+            $table->foreign('Status')->references('id')->on('housingstat');
             $table->string('Remarks');
+            $table->timestamps();
            
         });
     }

@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('departments', function (Blueprint $table) {
-            $table->id();
-            $table->string('DepName');
-            $table->unsignedBigInteger('AdminBodyID');
-            $table->foreign('AdminBodyID')->references('id')->on('adminbody');
-            $table->tinyInteger('delete_tab');
+        Schema::create('derim', function (Blueprint $table) {
+            $table->ID();
+            $table->string('DerimName');
+            $table->string('SqrFt');
+            $table->tinyInteger('Delete_tab');
+            $table->timestamps();
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departments');
+        Schema::dropIfExists('derim');
     }
 };
