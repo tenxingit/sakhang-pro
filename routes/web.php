@@ -2,8 +2,8 @@
 
 use GuzzleHttp\Promise\Create;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AddstaffController;
-use App\Http\Controllers\Changepasscontroller;
+use App\Http\Controllers\StaffController;
+use App\Http\Controllers\ChangePasscontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +18,8 @@ use App\Http\Controllers\Changepasscontroller;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('add-staff', [AddstaffController::class, 'add']);
-Route::post('add-staff', [AddstaffController::class, 'store']);
+Route::get('add-staff', [StaffController::class, 'index']);
+Route::post('add-staff', [StaffController::class, 'store']);
 
-Route::get('changepass', [Changepasscontroller::class, 'change']);
-Route::post('changepass', [Changepasscontroller::class, 'store']);
+Route::get('changepass', [ChangePasscontroller::class, 'change']);
+Route::post('changepass', [ChangePasscontroller::class, 'store']);

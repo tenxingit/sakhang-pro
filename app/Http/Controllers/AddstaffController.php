@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Staff;
 use Illuminate\Http\Request;
 
 class AddstaffController extends Controller
@@ -26,9 +26,9 @@ class AddstaffController extends Controller
             'status'=>'required',
             'remarks'=>'required'
         ]);
-       dd($attribute);
+      //  dd($attribute);
 
-        User::create($attribute);
+        Staff::create($attribute);
 
         return redirect('/');
   }
