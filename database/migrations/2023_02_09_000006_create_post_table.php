@@ -13,17 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('leshak', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->ID();
-            $table->integer('HouseNo');
-            $table->unsignedBigInteger('BuildingID');
-            $table->foreign('BuildingID')->references('id')->on('building');
+            $table->string('PostName');
             $table->unsignedBigInteger('DerimID');
             $table->foreign('DerimID')->references('id')->on('derim');
-            $table->integer('StaffID');
-           
             $table->tinyInteger('Delete_tab');
-        
+           
         });
     }
 
@@ -34,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('leshak');
+        Schema::dropIfExists('post');
     }
 };

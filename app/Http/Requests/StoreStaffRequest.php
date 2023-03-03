@@ -25,7 +25,7 @@ class StoreStaffRequest extends FormRequest
     {
        
         return [
-            'Appno' => 'integer|required|max:1000|min:3',
+            'Appno' => 'integer|required|max:1000',
             'Appdate' => 'date|required|max:100',
             'Name' => 'string|required|max:100|min:6',
             'Post' => 'string|required|max:100|min:5',
@@ -33,6 +33,7 @@ class StoreStaffRequest extends FormRequest
             'Appodate' => 'date|required|max:100',
             'Status' => 'string|required|max:100',
             'Remarks' => 'string|required|max:100',
+            
         ];
     }
 }

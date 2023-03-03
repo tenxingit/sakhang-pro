@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use League\CommonMark\Reference\Reference;
 
 return new class extends Migration
 {
@@ -13,9 +14,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('housingstat', function (Blueprint $table) {
+        Schema::create('log', function (Blueprint $table) {
             $table->ID();
-            $table->string('Name');
+            $table->string('Action');
+            $table->unsignedBigInteger('StaffID');
+            $table->foreign('StaffID')->references('id')->on('staff');
+            $table->unsignedBigInteger('ByUserID');
+            $table->foreign('ByUserID')->references('id')->on('users');
             $table->tinyInteger('Delete_tab');
             
         });
@@ -28,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('housingstat');
+        Schema::dropIfExists('log');
     }
 };

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ChangePasscontroller;
 use App\Http\Controllers\StaffController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ Route::get('/', function () {
 });
 Route::get('add-staff', [StaffController::class, 'index']);
 Route::post('/store', [StaffController::class, 'store'])->name('store');;
+
 
 
 Route::get('changepass', [ChangePasscontroller::class, 'change']);

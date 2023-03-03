@@ -1,10 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Staff;
 use App\Http\Requests\StoreStaffRequest;
 use App\Http\Requests\UpdateStaffRequest;
+use App\Models\Department;
+use App\Models\Post;
+use App\Models\Staff;
+use App\Models\Statu;
+use illuminate\contracts\View\Factory;
+use Illuminate\Http\Response;
 
 
 class StaffController extends Controller
@@ -16,7 +20,10 @@ class StaffController extends Controller
      */
     public function index()
     {
-        return view('add-staff');
+        $posts= Post::all();
+        $departments= Department::all();
+        $status= Statu::all();
+        return view('add-staff', compact('posts','departments','status'));
     }
 
     /**
@@ -37,13 +44,9 @@ class StaffController extends Controller
      */
   public function store(StoreStaffRequest $request)
 {
-    
-//    $validatedData = $request->validated();
-
-//    Staff::create($validatedData);
-
+   
+    // dd($request->all());
     Staff::create($request->all());
-   return redirect()->back()->with('success', 'Data has been stored successfully.');
    
    
 }
