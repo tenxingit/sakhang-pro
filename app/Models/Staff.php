@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Staff extends Model
 {
-    protected $table = 'Staffs';
+    protected $table = 'Staff';
   protected $guarded = [];
 }
