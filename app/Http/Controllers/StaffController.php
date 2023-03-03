@@ -7,8 +7,9 @@ use App\Models\Department;
 use App\Models\Post;
 use App\Models\Staff;
 use App\Models\Statu;
-use illuminate\contracts\View\Factory;
+use Illuminate\contracts\View\Factory;
 use Illuminate\Http\Response;
+use Illuminate\contracts\View\viewreturn;
 
 
 class StaffController extends Controller
@@ -47,7 +48,7 @@ class StaffController extends Controller
    
     // dd($request->all());
     Staff::create($request->all());
-   
+   return redirect()->back()->with('success', 'Data has been stored successfully.');
    
 }
 
