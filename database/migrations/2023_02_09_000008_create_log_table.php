@@ -14,13 +14,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('log', function (Blueprint $table) {
+        Schema::create('logs', function (Blueprint $table) {
             $table->ID();
             $table->string('Action');
-            $table->unsignedBigInteger('StaffID');
-            $table->foreign('StaffID')->references('id')->on('staff');
-            $table->unsignedBigInteger('ByUserID');
-            $table->foreign('ByUserID')->references('id')->on('users');
+            $table->unsignedBigInteger('staff_id');
+            $table->foreign('staff_id')->references('id')->on('staffs');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->tinyInteger('Delete_tab');
             
         });

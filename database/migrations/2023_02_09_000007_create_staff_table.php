@@ -13,18 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('staff', function (Blueprint $table) {
+        Schema::create('staffs', function (Blueprint $table) {
             $table->id();
             $table->string('Appno');
             $table->date('Appdate');
             $table->string('Name');
-            $table->unsignedBigInteger('Post');
-            $table->foreign('Post')->references('id')->on('posts');
-            $table->unsignedBigInteger('Dept');
-            $table->foreign('Dept')->references('id')->on('departments');
+            $table->unsignedBigInteger('post_id');
+            $table->foreign('post_id')->references('id')->on('posts');
+            $table->unsignedBigInteger('department_id');
+            $table->foreign('department_id')->references('id')->on('departments');
             $table->date('Appodate');
-            $table->unsignedBigInteger('Status');
-            $table->foreign('Status')->references('id')->on('status');
+            $table->unsignedBigInteger('status_id');
+            $table->foreign('status_id')->references('id')->on('status');
             $table->string('Remarks');
             $table->timestamps();
            

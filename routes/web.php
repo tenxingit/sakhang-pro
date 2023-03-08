@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\ChangePasscontroller;
 use App\Http\Controllers\StaffController;
-use App\Http\Controllers\PostController;
+use App\Models\Derim;
+use Brick\Math\BigInteger;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+$derim1_staffs=Derim::find(1)->staffs;
+    return view('welcome', compact('derim1_staffs'));
 });
 Route::get('add-staff', [StaffController::class, 'index']);
 Route::post('/store', [StaffController::class, 'store'])->name('store');;

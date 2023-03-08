@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
             $table->string('DepName');
-            $table->unsignedBigInteger('AdminBodyID');
-            $table->foreign('AdminBodyID')->references('id')->on('adminbody');
+            $table->unsignedBigInteger('adminbody_id');
+            $table->foreign('adminbody_id')->references('id')->on('adminbodys');
             $table->tinyInteger('delete_tab');
         });
     }

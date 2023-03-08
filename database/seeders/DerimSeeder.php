@@ -16,7 +16,7 @@ class DerimSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('derim')->insert([
+        DB::table('derims')->insert([
         [  'DerimName'=>'Derim1(a)',
         'SqrFt'=>'700-899',
         'Delete_tab'=>'0',],

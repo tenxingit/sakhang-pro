@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->ID();
             $table->string('PostName');
-            $table->unsignedBigInteger('DerimID');
-            $table->foreign('DerimID')->references('id')->on('derim');
+            $table->unsignedBigInteger('derim_id');
+            $table->foreign('derim_id')->references('id')->on('derims');
             $table->tinyInteger('Delete_tab');
            
         });

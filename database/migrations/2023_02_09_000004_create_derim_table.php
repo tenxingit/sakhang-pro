@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('derim', function (Blueprint $table) {
+        Schema::create('derims', function (Blueprint $table) {
             $table->ID();
             $table->string('DerimName');
             $table->string('SqrFt');

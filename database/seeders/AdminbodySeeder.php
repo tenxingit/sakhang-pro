@@ -16,7 +16,7 @@ class AdminbodySeeder extends Seeder
      */
     public function run()
     {
-    DB::table('adminbody')->insert([
+    DB::table('adminbodys')->insert([
 
         [  'AdminBodyName'=>'Ministerial',
         'Delete_tab'=>'0',],

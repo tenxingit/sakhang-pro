@@ -1,9 +1,14 @@
+<?
+namespace App\Models;
+
+use App\Models\Post;
+
 <!doctype html>
 
 <title>Sakhang Database</title>
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/tailwind.min.css') }}" >
  <link rel="stylesheet" href="{{ asset('css/addstf.css') }}">
 <body style="font-family: Open Sans, sans-serif" bgcolor="#09609e">
     <section class="px-20 py-1">

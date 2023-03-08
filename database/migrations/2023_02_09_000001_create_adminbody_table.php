@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('adminbody', function (Blueprint $table) {
+        Schema::create('adminbodys', function (Blueprint $table) {
             $table->ID();
             $table->string('AdminBodyName');
             $table->tinyInteger('Delete_tab');

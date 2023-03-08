@@ -28,10 +28,10 @@ class StoreStaffRequest extends FormRequest
             'Appno' => 'integer|required|max:1000',
             'Appdate' => 'date|required|max:100',
             'Name' => 'string|required|max:100',
-            'Post' => 'string|required|max:100',
-            'Dept' => 'string|required|max:100',
+            'post_id' => 'string|required|max:100',
+            'department_id' => 'string|required|max:100',
             'Appodate' => 'date|required|max:100',
-            'Status' => 'string|required|max:100',
+            'status_id' => 'string|required|max:100',
             'Remarks' => 'string|required|max:100',
             
         ];

@@ -1,7 +1,15 @@
  TD {
      font-family: Courier New;
-     font-size: 15pt;
+     text-align: center;
+     font-size: 11pt;
+     padding-left: 25pt;
+     padding-right: 25pt;
+    
  }
+ .derim{
+    background-color: grey;
+    font-weight:bold;
+}
 
  body {
      background-size: cover;
@@ -135,6 +143,9 @@
 
  a:hover {
      text-decoration: underline;
+ }
+ derim1{
+    border: 1px solid black;
  }
 
  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */

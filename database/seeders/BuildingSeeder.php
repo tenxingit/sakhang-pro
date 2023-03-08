@@ -16,7 +16,7 @@ class BuildingSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('building')->insert([
+        DB::table('buildings')->insert([
 
         ['BuildingName'=>'Tashi Khangsar',
         'Delete_tab'=>'0',],

@@ -38,7 +38,7 @@
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Post">
                 </lable>
                 Post
-                <select id="Post" name="Post">
+                <select id="Post" name="post_id">
                     <option value="0">Please Select</option>
                     @foreach ($posts as $post)
                         <option value="{{ $post->id }}">{{ $post->PostName }}</option>
@@ -56,7 +56,7 @@
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Department">
                 </lable>
                 Department
-                <select id="Department" name="Dept">
+                <select id="Department" name="department_id">
                     <option value="">Please Select</option>
 
                     @foreach ($departments as $department)
@@ -83,7 +83,7 @@
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Status">
                 </lable>
                 Status
-                <select id="Status" name="Status">
+                <select id="Status" name="status_id">
                     <option value="">Please Select</option>
                     
                      @foreach ($status as $statu)

@@ -5,9 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
-
-class HouseStaSeeder extends Seeder
+class LeshakSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,8 +14,11 @@ class HouseStaSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('status')->insert([
-        [  'Name'=>'Transferred',
+        DB::table('leshaks')->insert([
+        [  'HouseNo'=>'Transferred',
+        'Building_id'=>'Transferred',
+        'Derim_id'=>'Transferred',
+        'StaffID'=>'Transferred',
         'Delete_tab'=>'0',],
 
         [  'Name'=>'Exceptional Cases',
@@ -33,6 +34,5 @@ class HouseStaSeeder extends Seeder
         'Delete_tab'=>'0',],
       
     ]);
-  
     }
 }

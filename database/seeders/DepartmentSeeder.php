@@ -17,75 +17,75 @@ class DepartmentSeeder extends Seeder
     {
           DB::table('departments')->insert([
         [  'DepName'=>'Religion Deptt',
-        'AdminBodyID'=>'1',
+        'Adminbody_id'=>'1',
         'Delete_tab'=>'0',],
 
         [  'DepName'=>'Home Deptt',
-        'AdminBodyID'=>'1',
+        'Adminbody_id'=>'1',
         'Delete_tab'=>'0',],
         
         [  'DepName'=>'Finance Deptt',
-        'AdminBodyID'=>'1',
+        'Adminbody_id'=>'1',
         'Delete_tab'=>'0',],
 
         [  'DepName'=>'Education Deptt',
-        'AdminBodyID'=>'1',
+        'Adminbody_id'=>'1',
         'Delete_tab'=>'0',],
         
         [  'DepName'=>'Security Deptt',
-        'AdminBodyID'=>'1',
+        'Adminbody_id'=>'1',
         'Delete_tab'=>'0',],
 
         [  'DepName'=>'DIIR',
-        'AdminBodyID'=>'1',
+        'Adminbody_id'=>'1',
         'Delete_tab'=>'0',],
         
         [  'DepName'=>'Health Deptt',
-        'AdminBodyID'=>'1',
+        'Adminbody_id'=>'1',
         'Delete_tab'=>'0',],
 
         [  'DepName'=>'Kashag',
-        'AdminBodyID'=>'2',
+        'Adminbody_id'=>'2',
         'Delete_tab'=>'0',],
         
         [  'DepName'=>'Ngemey',
-        'AdminBodyID'=>'2',
+        'Adminbody_id'=>'2',
         'Delete_tab'=>'0',],
 
         [  'DepName'=>'Planning',
-        'AdminBodyID'=>'2',
+        'Adminbody_id'=>'2',
         'Delete_tab'=>'0',],
         
         [  'DepName'=>'TSJC',
-        'AdminBodyID'=>'2',
+        'Adminbody_id'=>'2',
         'Delete_tab'=>'0',],
 
         [  'DepName'=>'Election',
-        'AdminBodyID'=>'3',
+        'Adminbody_id'=>'3',
         'Delete_tab'=>'0',],
         
         [  'DepName'=>'PSC',
-        'AdminBodyID'=>'3',
+        'Adminbody_id'=>'3',
         'Delete_tab'=>'0',],
 
         [  'DepName'=>'Audit Office',
-        'AdminBodyID'=>'3',
+        'Adminbody_id'=>'3',
         'Delete_tab'=>'0',],
         
         [  'DepName'=>'TPIE',
-        'AdminBodyID'=>'2',
+        'Adminbody_id'=>'2',
         'Delete_tab'=>'0',],
 
         [  'DepName'=>'TPI',
-        'AdminBodyID'=>'4',
+        'Adminbody_id'=>'4',
         'Delete_tab'=>'0',],
         
         [  'DepName'=>'TCRC',
-        'AdminBodyID'=>'4',
+        'Adminbody_id'=>'4',
         'Delete_tab'=>'0',],
 
         [  'DepName'=>'Narthang',
-        'AdminBodyID'=>'4',
+        'Adminbody_id'=>'4',
         'Delete_tab'=>'0',],
       
     ]);

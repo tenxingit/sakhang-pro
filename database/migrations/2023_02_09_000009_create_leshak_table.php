@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('leshak', function (Blueprint $table) {
+        Schema::create('leshaks', function (Blueprint $table) {
             $table->ID();
             $table->integer('HouseNo');
-            $table->unsignedBigInteger('BuildingID');
-            $table->foreign('BuildingID')->references('id')->on('building');
-            $table->unsignedBigInteger('DerimID');
-            $table->foreign('DerimID')->references('id')->on('derim');
-            $table->unsignedBigInteger('StaffID');
-            $table->foreign('StaffID')->references('id')->on('staff');
+            $table->unsignedBigInteger('building_id');
+            $table->foreign('building_id')->references('id')->on('buildings');
+            $table->unsignedBigInteger('derim_id');
+            $table->foreign('derim_id')->references('id')->on('derims');
+            $table->unsignedBigInteger('staff_id');
+            $table->foreign('staff_id')->references('id')->on('staffs');
             $table->tinyInteger('Delete_tab');
         
         });
