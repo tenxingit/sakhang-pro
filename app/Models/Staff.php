@@ -9,10 +9,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Staff extends Model
 {
-    protected $table = 'Staffs';
+  protected $table = 'Staffs';
   protected $guarded = [];
 
-  public function post(): BelongsTo{
+  public function post(){
     return $this->belongsTo(Post::class);
+  }
+
+  public function derim(){
+    return $this->belongsToThrough(Derim::class, Post::class);
   }
 }

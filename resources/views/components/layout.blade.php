@@ -21,14 +21,15 @@ use App\Models\Post;
                     class="md:flex md:justify-between md:items-center px-3 py-1 border border-blue-300  text-whiite-300 text-xs uppercase font-semibold bg-gray-100">
                     <li><a href="/">Home</a> </li>
                     <li><a href="add-staff">Add Staff</a></li>
-                    <li><a href="#">Derim 1(b)</a></li>
-                    <li><a href="#">Derim 2(a)</a></li>
-                    <li><a href="#">Derim 2(b)</a></li>
-                    <li><a href="#">Derim 3</a></li>
-                    <li><a href="#">Derim 4</a></li>
-                    <li><a href="#">Derim 5</a></li>
-                    <li><a href="#">Add New Building</a></li>
-                    <li><a href="#">Edit/Add Leshak</a></li>
+                    <li><a href="derim1">Derim 1(a)</a></li>
+                    <li><a href="derim2">Derim 1(b)</a></li>
+                    <li><a href="derim3">Derim 2(a)</a></li>
+                    <li><a href="derim4">Derim 2(b)</a></li>
+                    <li><a href="derim5">Derim 3</a></li>
+                    <li><a href="derim6">Derim 4</a></li>
+                    <li><a href="derim7">Derim 5</a></li>
+                    <li><a href="building">Add New Building</a></li>
+                    <li><a href="leshak">Edit/Add Leshak</a></li>
                     <li><a href="changepass">Change</a></li>
                     <li><a href="#">Logout</a></li>
 

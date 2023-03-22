@@ -7,6 +7,7 @@ use App\Models\Department;
 use App\Models\Post;
 use App\Models\Staff;
 use App\Models\Statu;
+use App\Models\Derim;
 use Illuminate\contracts\View\Factory;
 use Illuminate\Http\Response;
 use Illuminate\contracts\View\viewreturn;
@@ -24,7 +25,21 @@ class StaffController extends Controller
         $posts= Post::all();
         $departments= Department::all();
         $status= Statu::all();
-        return view('add-staff', compact('posts','departments','status'));
+        return view ('add-staff', compact('posts', 'departments', 'status'));
+    }
+
+    public function home()
+    {
+        $firsts=Derim::find(1)->staffs; //derim1(a)
+        $secounds=Derim::find(2)->staffs; //derim1(b)
+        $thirds=Derim::find(3)->staffs;//derim2(a)
+        $fourths=Derim::find(4)->staffs;//derim2(b)
+        $fifths=Derim::find(5)->staffs;//derim3
+        $sixths=Derim::find(6)->staffs;//derim4
+        $sevenths=Derim::find(7)->staffs;//derim5
+
+
+        return view('welcome', compact('firsts', 'secounds', 'thirds', 'fourths', 'fifths', 'sixths', 'sevenths'));
     }
 
     /**

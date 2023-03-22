@@ -17,6 +17,6 @@ class Derim extends Model
 
     public function staffs()
     {
-        return $this->hasOneThrough(Staff::class, Post::class);
+        return $this->hasManyThrough(Staff::class, Post::class);
     }
 }

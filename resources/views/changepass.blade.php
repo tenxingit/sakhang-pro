@@ -3,9 +3,9 @@
         <h1 class="text-center font-bold text-xl"> Change Password</h1>
         <form action="POST" action="#">
             <div class="mb-6 ">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Old Password">
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Old Password">   Old Password
                 </lable>
-                Old Password
+             
                 <input class="border border-gray-400 p2 w-full" 
                 type="password" 
                 name="oldpass" 
@@ -14,9 +14,9 @@
             </div>
 
             <div class="mb-6">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="">
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for=""> New Password
                 </lable>
-                New Password
+               
                 <input class="border border-gray-400 p2 w-full" 
                 type="password" 
                 name="newpass" 
@@ -25,9 +25,9 @@
             </div>
 
             <div class="mb-6">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="">
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="">Re-type New Password
                 </lable>
-                Re-type New Password
+                
                 <input class="border border-gray-400 p2 w-full" 
                 type="password" 
                 name="repass" 

@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\BuildingController;
 use App\Http\Controllers\ChangePasscontroller;
+use App\Http\Controllers\LeshakController;
+use App\Http\Controllers\DerimController;
 use App\Http\Controllers\StaffController;
-use App\Models\Derim;
-use Brick\Math\BigInteger;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +17,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
 
-$derim1_staffs=Derim::find(1)->staffs;
-    return view('welcome', compact('derim1_staffs'));
+Route::get('/login', function(){
+    return view('login');
 });
-Route::get('add-staff', [StaffController::class, 'index']);
-Route::post('/store', [StaffController::class, 'store'])->name('store');;
+Route::get('/', [StaffController::class, 'home']);
 
+
+Route::get('add-staff', [StaffController::class, 'index']);
+Route::post('/store', [StaffController::class, 'store'])->name('store');
+
+Route::get('derim1', [DerimController::class, 'first']);
+Route::get('derim2', [DerimController::class, 'second']);
+Route::get('derim3', [DerimController::class, 'third']);
+Route::get('derim4', [DerimController::class, 'fourth']);
+Route::get('derim5', [DerimController::class, 'fifth']);
+Route::get('derim6', [DerimController::class, 'sixth']);
+Route::get('derim7', [DerimController::class, 'seventh']);
+
+Route::get('building', [BuildingController::class, 'index']);
+Route::post('/add', [BuildingController::class, 'add'])->name('add');
+
+Route::get('leshak', [LeshakController::class, 'home']);
 
 
 Route::get('changepass', [ChangePasscontroller::class, 'change']);
 Route::post('changepass', [ChangePasscontroller::class, 'store']);
+

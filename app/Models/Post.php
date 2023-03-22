@@ -15,7 +15,9 @@ public function staffs(): HasMany{
    return $this->hasMany(Staff::class);
 }
 
-public function derim(): BelongsTo{
+public function derim(){
    return $this->belongsTo(Derim::class);
 }
+
 }
+
