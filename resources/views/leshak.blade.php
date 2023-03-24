@@ -4,7 +4,7 @@
         <form>
             @csrf
             <div class="mb-6 ">
-                <lable class="block mb-2 uppercase font-bold text-lg py-2 text-gray-700" for="New Building "> Building
+                <lable class="block mb-2 uppercase font-bold text-lg py-2 text-gray-700" for="New Building "> Building Name
                 </lable>
 
                 <select id="building" name="building_id" class="overflow-auto max-h-40">
@@ -26,28 +26,8 @@
             </div>
         </form>
         <script>
-            function showBuilding() {
-                var id= document.getElementById("id");
-               document.write(id);
+         
 
-            //     <table class = "table" >
-            //         <thead >
-            //         <tr>
-            //         <th colspan = "6" > Search Result Foundfor Building </th>
-            //         </tr>
-            //          </thead> 
-            //          <tbody >
-            //         <tr>
-            //         <td colspan = "3" > House No </td>
-            //         <td colspan = "3" > Derim </td> 
-            //         </tr> 
-            //         <t >
-            //         <td colspan = "3" > tashi delek </td> 
-            //         <td colspan = "3" > khamsang </td> 
-            //         </tr>
-            //         </tbody>
-            //         </table >
-            }
         </script>
 
     </main>

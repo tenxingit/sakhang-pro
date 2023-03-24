@@ -12,12 +12,8 @@ class LeshakController extends Controller
     public function home(){
         $buildings= Building::all();
       
-        return view ('leshak', compact('buildings', 'staffs'));
+        return view ('leshak', compact('buildings'));
     }
    
-    public function edit()
-    {
-        $staffs= Staff::class::all();
-        return view ('houseallot', compact('staffs'));
-    }
+   
 }
