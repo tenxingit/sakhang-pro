@@ -4,11 +4,15 @@
      font-size: 11pt;
      padding-left: 25pt;
      padding-right: 25pt;
+     color: rgb(6, 79, 6);
     
  }
- .derim{
+ .derim:th{
     background-color: grey;
     font-weight:bold;
+    padding-left: 25pt;
+    padding-right: 25pt;
+    color: Orange;
 }
 
  body {
@@ -36,6 +40,13 @@
      border-radius: 10px;
      margin-left: 220px;
  }
+.leshak{
+    padding-left: 90rem;
+    padding-right: 90rem;
+    width: 500px;
+    color: white;
+    background-color:#09609e ;
+}
 
 
  .button:hover {

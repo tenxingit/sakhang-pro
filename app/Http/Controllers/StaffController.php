@@ -24,8 +24,7 @@ class StaffController extends Controller
     {
         $posts= Post::all();
         $departments= Department::all();
-        $status= Statu::all();
-        return view ('add-staff', compact('posts', 'departments', 'status'));
+        return view ('add-staff', compact('posts', 'departments'));
     }
 
     public function home()

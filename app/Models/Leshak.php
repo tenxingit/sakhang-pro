@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Leshak extends Model
 {
-    use HasFactory;
+    protected $guarded = [];
+
 }

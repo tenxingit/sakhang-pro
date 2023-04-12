@@ -4,9 +4,8 @@
         <form method="POST" action="{{ route('store') }}">
             @csrf
             <div class="mb-5 ">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Application no">
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Application no"> Application no
                 </lable>
-                Application no
                 <input class="border border-gray-400 p2 w-full" type="text" name="Appno" id="Appno" required>
                 @error('Appno')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -14,9 +13,9 @@
             </div>
 
             <div class="mb-5">
+                Application Date
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Application Date">
                 </lable>
-                Application Date
                 <input class="border border-gray-400 p2 w-full" type="date" name="Appdate" id="Appdate" required>
                 @error('Appdate')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -24,9 +23,9 @@
             </div>
 
             <div class="mb-5">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="First Name">
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="First Name">  Name
                 </lable>
-                Name
+              
                 <input class="border border-gray-400 p2 w-full" type="text" name="Name" id="Name" required>
                 @error('Name')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -35,9 +34,9 @@
 
 
             <div class="mb-5">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Post">
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Post">Post
                 </lable>
-                Post
+                
                 <select id="Post" name="post_id">
                     <option value="0">Please Select</option>
                     @foreach ($posts as $post)
@@ -53,9 +52,9 @@
             </div>
 
             <div class="mb-5">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Department">
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Department"> Department
                 </lable>
-                Department
+               
                 <select id="Department" name="department_id">
                     <option value="">Please Select</option>
 
@@ -70,9 +69,9 @@
             </div>
 
             <div class="mb-5">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Appointment Date">
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Appointment Date"> Appointment Date
                 </lable>
-                Appointment Date
+               
                 <input class="border border-gray-400 p2 w-full" type="date" name="Appodate" id="Appodate" required>
                 @error('Appodate')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -80,16 +79,14 @@
             </div>
 
             <div class="mb-5">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Status">
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Status">Status
                 </lable>
-                Status
-                <select id="Status" name="status_id">
+                
+                <select id="Status" name="status">
                     <option value="">Please Select</option>
-                    
-                     @foreach ($status as $statu)
-                        <option value="{{ $statu->id }}">{{ $statu->Name }}</option>
-                    @endforeach
-                    
+                    <option value="Exceptional_Case">Exceptional Case</option>
+                    <option value="General_Waiting_List">General Waiting List</option>
+                    <option value="Transferred">Transferred</option>
                 </select>
                 @error('status')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -97,9 +94,9 @@
             </div>
 
             <div class="mb-5">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Remarks">
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Remarks">Remarks
                 </lable>
-                Remarks
+                
                 <textarea name="Remarks" id="Remarks"></textarea>
                 @error('remark')
                     <div class="alert alert-danger">{{ $message }}</div>

@@ -16,13 +16,11 @@ return new class extends Migration
         Schema::create('leshaks', function (Blueprint $table) {
             $table->ID();
             $table->integer('HouseNo');
-            $table->unsignedBigInteger('building_id');
-            $table->foreign('building_id')->references('id')->on('buildings');
-            $table->unsignedBigInteger('derim_id');
-            $table->foreign('derim_id')->references('id')->on('derims');
-            $table->unsignedBigInteger('staff_id');
-            $table->foreign('staff_id')->references('id')->on('staffs');
+            $table->integer('building_id');          
+            $table->integer('derim_id');        
+            $table->integer('staff_id');
             $table->tinyInteger('Delete_tab');
+            $table->timestamps();
         
         });
     }

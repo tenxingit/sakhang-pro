@@ -23,7 +23,7 @@ class StoreStaffRequest extends FormRequest
      */
     public function rules()
     {
-       
+
         return [
             'Appno' => 'integer|required|max:1000',
             'Appdate' => 'date|required|max:100',
@@ -31,9 +31,9 @@ class StoreStaffRequest extends FormRequest
             'post_id' => 'string|required|max:100',
             'department_id' => 'string|required|max:100',
             'Appodate' => 'date|required|max:100',
-            'status_id' => 'string|required|max:100',
+            'status' => 'string|required|max:100',
             'Remarks' => 'string|required|max:100',
-            
+
         ];
     }
 }

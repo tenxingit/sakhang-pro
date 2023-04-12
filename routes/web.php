@@ -39,6 +39,9 @@ Route::get('building', [BuildingController::class, 'index']);
 Route::post('/add', [BuildingController::class, 'add'])->name('add');
 
 Route::get('leshak', [LeshakController::class, 'home']);
+Route::get('addleshak',[LeshakController::class, 'addleshak']);
+Route::post('/add-leshak', [LeshakController::class, 'store'])->name('add-leshak');
+Route::get('edit-staff', [StaffController::class, 'edit']);
 
 
 Route::get('changepass', [ChangePasscontroller::class, 'change']);

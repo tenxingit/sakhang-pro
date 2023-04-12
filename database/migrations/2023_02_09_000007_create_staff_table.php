@@ -23,8 +23,7 @@ return new class extends Migration
             $table->unsignedBigInteger('department_id');
             $table->foreign('department_id')->references('id')->on('departments');
             $table->date('Appodate');
-            $table->unsignedBigInteger('status_id');
-            $table->foreign('status_id')->references('id')->on('status');
+            $table->string('status');
             $table->string('Remarks');
             $table->timestamps();
            

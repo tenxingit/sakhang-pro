@@ -4,12 +4,14 @@ namespace App\Models;
 use App\Models\Post;
 
 <!doctype html>
-
+<head>
 <title>Sakhang Database</title>
+@livewireStyles
 
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/tailwind.min.css') }}" >
  <link rel="stylesheet" href="{{ asset('css/addstf.css') }}">
+ </head>
 <body style="font-family: Open Sans, sans-serif" bgcolor="#09609e">
     <section class="px-20 py-1">
         <nav>
@@ -39,5 +41,6 @@ use App\Models\Post;
     </section>
     
 {{ $slot }}
+@livewireScripts
 </body>
 </html>

@@ -14,7 +14,7 @@
             <div class="mb-6">
                 <button type="submit"
                     class="bg-bule-400  border border-black p-6 rounded-xl py-2 px-4 hover:bg-green-500">
-                    Submit
+                    Add
                 </button>
             </div>
         </form>
