@@ -23,9 +23,9 @@
             </div>
 
             <div class="mb-5">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="First Name">  Name
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="First Name"> Name
                 </lable>
-              
+
                 <input class="border border-gray-400 p2 w-full" type="text" name="Name" id="Name" required>
                 @error('Name')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -36,7 +36,7 @@
             <div class="mb-5">
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Post">Post
                 </lable>
-                
+
                 <select id="Post" name="post_id">
                     <option value="0">Please Select</option>
                     @foreach ($posts as $post)
@@ -54,7 +54,7 @@
             <div class="mb-5">
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Department"> Department
                 </lable>
-               
+
                 <select id="Department" name="department_id">
                     <option value="">Please Select</option>
 
@@ -69,9 +69,10 @@
             </div>
 
             <div class="mb-5">
-                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Appointment Date"> Appointment Date
+                <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Appointment Date"> Appointment
+                    Date
                 </lable>
-               
+
                 <input class="border border-gray-400 p2 w-full" type="date" name="Appodate" id="Appodate" required>
                 @error('Appodate')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -81,11 +82,11 @@
             <div class="mb-5">
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Status">Status
                 </lable>
-                
+
                 <select id="Status" name="status">
                     <option value="">Please Select</option>
-                    <option value="Exceptional_Case">Exceptional Case</option>
-                    <option value="General_Waiting_List">General Waiting List</option>
+                    <option value="Exceptional Case">Exceptional Case</option>
+                    <option value="General Waiting List">General Waiting List</option>
                     <option value="Transferred">Transferred</option>
                 </select>
                 @error('status')
@@ -96,7 +97,7 @@
             <div class="mb-5">
                 <lable class="block mb-2 uppercase font-bold text-xs text-gray-700" for="Remarks">Remarks
                 </lable>
-                
+
                 <textarea name="Remarks" id="Remarks"></textarea>
                 @error('remark')
                     <div class="alert alert-danger">{{ $message }}</div>

@@ -6,11 +6,7 @@ use App\Http\Requests\UpdateStaffRequest;
 use App\Models\Department;
 use App\Models\Post;
 use App\Models\Staff;
-use App\Models\Statu;
 use App\Models\Derim;
-use Illuminate\contracts\View\Factory;
-use Illuminate\Http\Response;
-use Illuminate\contracts\View\viewreturn;
 
 
 class StaffController extends Controller
@@ -84,9 +80,10 @@ class StaffController extends Controller
      * @param  \App\Models\Staff  $staff
      * @return \Illuminate\Http\Response
      */
-    public function edit(Staff $staff)
+    public function edit($id)
     {
-        //
+        $data= Staff::find($id);
+        return view('edit-staff', compact('data'));
     }
 
     /**

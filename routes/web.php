@@ -26,6 +26,8 @@ Route::get('/', [StaffController::class, 'home']);
 
 Route::get('add-staff', [StaffController::class, 'index']);
 Route::post('/store', [StaffController::class, 'store'])->name('store');
+Route::get('edit-staff/{id}', [StaffController::class, 'edit'])->name('edit-staff');
+
 
 Route::get('derim1', [DerimController::class, 'first']);
 Route::get('derim2', [DerimController::class, 'second']);
@@ -41,7 +43,6 @@ Route::post('/add', [BuildingController::class, 'add'])->name('add');
 Route::get('leshak', [LeshakController::class, 'home']);
 Route::get('addleshak',[LeshakController::class, 'addleshak']);
 Route::post('/add-leshak', [LeshakController::class, 'store'])->name('add-leshak');
-Route::get('edit-staff', [StaffController::class, 'edit']);
 
 
 Route::get('changepass', [ChangePasscontroller::class, 'change']);

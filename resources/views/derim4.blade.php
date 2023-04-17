@@ -21,7 +21,7 @@
                             <td>{{ $fourth->id }}</td>
                             <td>{{ $fourth->Appno }}</td>
                             <td>{{ $fourth->Appdate }}</td>
-                            <td>{{ $fourth->Name }}</td>
+                            <td class="td"><a href="{{ route('edit-staff', ['id' => $fourth->id]) }}">{{ $fourth->Name }}</a></td>
                             <td>{{ $fourth->post_id }}</td>
                             <td>{{ $fourth->department_id }}</td>
                         </tr>

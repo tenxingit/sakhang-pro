@@ -20,7 +20,7 @@
                             <td>{{ $secound->id }}</td>
                             <td>{{ $secound->Appno }}</td>
                             <td>{{ $secound->Appdate }}</td>
-                            <td>{{ $secound->Name }}</td>
+                            <td class="td"><a href="{{ route('edit-staff', ['id' => $secound->id]) }}">{{ $secound->Name }}</a></td>
                             <td>{{ $secound->post_id }}</td>
                             <td>{{ $secound->department_id }}</td>
                         </tr>

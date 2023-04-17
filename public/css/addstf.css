@@ -143,9 +143,14 @@
  }
 
  /* Change color on hover */
- .navbar a:hover {
-     background-color: #ddd;
-     color: black;
+ .td a:hover {
+    background-color: #ddd;
+    color: black;
+    font-weight: 600;
+ }
+ .edit td
+ {
+    text-align: left;
  }
 
  li {
@@ -156,6 +161,7 @@
  a:hover {
      text-decoration: underline;
  }
+
  derim1{
     border: 1px solid black;
  }
